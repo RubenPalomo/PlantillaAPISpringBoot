@@ -19,14 +19,14 @@ import com.project.Project.models.Element;
 import com.project.Project.service.ProjectService;
 
 @RestController
-@RequestMapping("/flight")
+@RequestMapping("/elements")
 @CrossOrigin
 public class ProjectController {
     @Autowired
     private ProjectService projectService;
 
     @GetMapping()
-    public List<Element> getFlights() {
+    public List<Element> getElements() {
         return projectService.findAll();
     }
 
